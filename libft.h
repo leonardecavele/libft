@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 11:37:21 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/22 13:35:56 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/08/22 15:19:27 by ldecavel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 size_t	ft_strlen(const char *s);
+void	*ft_memset(void *s, int c, size_t n);
+void	ft_bzero(void *s, size_t n);
 
 //bonus
 t_list	*ft_lstnew(void *content);
