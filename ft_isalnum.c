@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 11:59:37 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/22 13:23:18 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/08/22 18:14:46 by ldecavel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	return ((c >= '0' && c <= '9')
-		|| (c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z'));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

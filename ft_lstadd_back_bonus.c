@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 11:36:11 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/22 13:24:27 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/08/22 18:46:28 by ldecavel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*temp;
+	t_list	*last;
 
 	if (!new || !lst)
 		return ;
@@ -23,8 +23,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	temp = *lst;
-	while (temp->next)
-		temp = temp->next;
-	temp->next = new;
+	last = ft_lstlast(*lst);
+	last->next = new;
 }
