@@ -1,35 +1,48 @@
 NAME = libft.a
 
 CC = cc
-CFLAGS = -MMD -MP -c -Wall -Wextra -Werror -I$(INCD)
-
-SRC_DIR = srcs
-INCD = includes
+AR = ar rcs
+CFLAGS = -MMD -MP -Wall -Wextra -Werror -I.
 
 SRCS = \
-	$(SRC_DIR)/ft_putchar.c \
-	$(SRC_DIR)/ft_swap.c \
-	$(SRC_DIR)/ft_putstr.c \
-	$(SRC_DIR)/ft_strlen.c \
-	$(SRC_DIR)/ft_strcmp.c 
+	ft_isalpha.c \
+	ft_isdigit.c \
+	ft_isalnum.c \
+	ft_isascii.c \
+	ft_isprint.c \
 
 OBJS = $(SRCS:.c=.o)
 DEPS = $(OBJS:.o=.d)
 
+BSRCS = \
+	ft_lstadd_back_bonus.c \
+	ft_lstadd_front_bonus.c \
+	ft_lstlast_bonus.c \
+	ft_lstnew_bonus.c \
+	ft_lstsize_bonus.c
+
+BOBJS = $(BSRCS:.c=.o)
+BDEPS = $(BOBJS:.o=.d)
+
+.PHONY: all bonus clean fclean re
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
-$(SRC_DIR)/%.o: $(SRC_DIR)/%.c
+bonus: $(OBJS) $(BOBJS)
+	$(AR) $(NAME) $(OBJS) $(BOBJS)
+
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(DEPS)
+	rm -f $(OBJS) $(DEPS) $(BOBJS) $(BDEPS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
--include $(DEPS)
+-include $(DEPS) $(BDEPS)
