@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 20:34:31 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/22 23:38:01 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/08/27 11:09:26 by ldecavel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	r_cpy(void *dst, const void *src, size_t n)
 
 	i = -1;
 	while (++i < n)
-		((unsigned char *)dst)[i] = ((const unsigned char *)src)[i];
+		U8P(dst)[i] = U8P(src)[i];
 }
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
