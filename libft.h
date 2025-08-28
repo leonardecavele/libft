@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 11:37:21 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/27 14:04:06 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/08/28 11:17:45 by ldecavel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stddef.h>
 
-# define U8P(p) ((unsigned char *)(p))
+typedef unsigned char	*t_u8p;
 
 typedef struct s_list
 {

@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 19:06:52 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/27 11:05:40 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/08/28 11:20:53 by ldecavel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	while (n--)
-		U8P(dst)[n] = U8P(src)[n];
+		((t_u8p)dst)[n] = ((t_u8p)src)[n];
 	return (dst);
 }
