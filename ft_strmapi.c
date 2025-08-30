@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 10:51:46 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/30 11:19:24 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/08/30 11:28:10 by ldecavel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
-	char	*ptr;
+	unsigned int	i;
+	char			*ptr;
 
 	if (!s || !f)
 		return (NULL);
