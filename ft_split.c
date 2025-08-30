@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 16:11:04 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/29 19:33:39 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/08/30 20:26:22 by ldecavel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	**ft_split(char const *s, char c)
 
 	strips = count_strips(s, c);
 	split = ft_calloc(strips--, sizeof(char *));
-	if (!split)
+	if (!split || !s)
 		return (NULL);
 	i = ft_strlen(s);
 	while (i > 0)
