@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 13:03:53 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/30 19:02:43 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/08/30 20:18:06 by ldecavel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	if (size && nmemb > SIZE_MAX / size)
 		return (NULL);
-	if (nmemb == 0 || size == 0)
+	if (!size || !nmemb)
 	{
-		nmemb = 1;
 		size = 1;
+		nmemb = 1;
 	}
 	ptr = malloc(size * nmemb);
 	if (!ptr)
