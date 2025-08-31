@@ -6,12 +6,20 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 16:11:04 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/30 22:51:54 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/08/31 11:58:45 by ldecavel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+static void	*free_strips(size_t strips, char **split)
+{
+	while (split[++strips])
+		free(split[strips]);
+	free(split);
+	return (NULL);
+}
 
 static size_t	count_strips(char const *s, char c)
 {
@@ -59,7 +67,7 @@ char	**ft_split(char const *s, char c)
 			i--;
 		split[--strips] = ft_substr(s, i, temp - i);
 		if (!split[strips])
-			return (NULL);
+			return (free_strips(strips, split));
 	}
 	return (split);
 }
