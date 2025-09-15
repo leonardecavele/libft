@@ -64,8 +64,13 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(BOBJS)
-	$(AR) $(NAME) $(OBJS) $(BOBJS)
+bonus: $(BOBJS)
+	@if [ -f $(NAME) ] && ar t $(NAME) | grep -Eq 'bonus'; then \
+		echo "make: Nothing to be done for 'bonus'."; \
+	else \
+		echo $(AR) $(NAME) $(BOBJS); \
+		$(AR) $(NAME) $(BOBJS); \
+	fi
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
