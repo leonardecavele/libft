@@ -2,7 +2,7 @@ NAME = libft.a
 
 CC = cc
 AR = ar rcs
-CFLAGS = -MMD -MP -Wall -Wextra -Werror -I.
+CFLAGS = -MMD -MP -Wall -Wextra -Werror -I .
 
 SRCS = \
 	ft_isalpha.c \
