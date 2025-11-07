@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 10:51:46 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/30 11:28:10 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/11/04 14:03:21 by ldecavel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	ptr = malloc (ft_strlen(s) + 1);
+	ptr = malloc(ft_strlen(s) + 1);
 	if (!ptr)
 		return (NULL);
 	i = -1;

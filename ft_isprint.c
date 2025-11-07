@@ -6,11 +6,9 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 12:19:37 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/22 13:24:15 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/11/04 13:06:43 by ldecavel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {

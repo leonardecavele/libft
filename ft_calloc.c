@@ -6,17 +6,18 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 13:03:53 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/30 20:18:06 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/11/04 14:29:04 by ldecavel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 #include <stdlib.h>
 #include <stdint.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
+	int		len;
 
 	if (size && nmemb > SIZE_MAX / size)
 		return (NULL);
@@ -25,9 +26,11 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		size = 1;
 		nmemb = 1;
 	}
-	ptr = malloc(size * nmemb);
+	len = size * nmemb;
+	ptr = malloc(len);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, size * nmemb);
+	while (len--)
+		((t_u8p)ptr)[len] = 0;
 	return (ptr);
 }

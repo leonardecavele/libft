@@ -66,7 +66,6 @@ $(NAME): $(OBJS)
 		if ! (find $(OBJS) -newer "$(NAME)" -print -quit | grep -q .); then \
 			echo "make: Nothing to be done for 'all'."; \
 		else \
-			rm -f "$(NAME)"; \
 			echo $(AR) $(NAME) $(OBJS); \
 			$(AR) $(NAME) $(OBJS); \
 		fi; \
@@ -79,7 +78,7 @@ bonus: $(BOBJS)
 	@if [ -f "$(NAME)" ]; then \
 		if ar t "$(NAME)" | grep -qE 'bonus' \
 		&& ! (find $(BOBJS) -newer "$(NAME)" -print -quit | grep -q .); then \
-			echo "make: Nothing to be done for 'bonus'."; \
+			echo "make: Nothing to be done for '$@'."; \
 		else \
 			echo $(AR) $(NAME) $(BOBJS); \
 			$(AR) $(NAME) $(BOBJS); \

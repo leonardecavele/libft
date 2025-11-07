@@ -6,11 +6,9 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 18:05:36 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/26 18:08:09 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/11/04 13:34:00 by ldecavel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_tolower(int c)
 {

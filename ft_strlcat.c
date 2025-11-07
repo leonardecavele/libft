@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 17:09:46 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/07/13 09:04:03 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/11/04 15:35:59 by ldecavel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst_len = 0;
 	while (dst_len < size && dst[dst_len])
 		dst_len++;
-	src_len = ft_strlen(src);
+	src_len = -1;
+	while (src[++src_len])
+		;
 	if (dst_len == size)
 		return (dst_len + src_len);
 	i = -1;

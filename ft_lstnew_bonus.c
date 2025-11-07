@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 11:37:14 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/28 11:48:25 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/11/04 14:51:01 by ldecavel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ t_list	*ft_lstnew(void *content)
 
 	ptr = malloc(sizeof(struct s_list));
 	if (!ptr)
-		return (NULL);
+		return (0);
 	ptr->content = content;
-	ptr->next = NULL;
+	ptr->next = 0;
 	return (ptr);
 }

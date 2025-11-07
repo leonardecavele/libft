@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 12:24:24 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/30 20:12:33 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/11/04 14:33:14 by ldecavel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,13 @@ char	*ft_strdup(const char *s)
 	size_t	len;
 	char	*ptr;
 
-	len = ft_strlen(s) + 1;
+	len = 0;
+	while (s[++len])
+		;
 	ptr = malloc(len);
 	if (!ptr)
 		return (NULL);
-	ft_memcpy(ptr, s, len);
+	while (len--)
+		ptr[len] = s[len];
 	return (ptr);
 }

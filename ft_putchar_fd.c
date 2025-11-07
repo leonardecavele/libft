@@ -6,11 +6,10 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 11:32:58 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/30 11:33:48 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/11/04 14:49:00 by ldecavel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)
