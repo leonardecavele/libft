@@ -78,7 +78,7 @@ bonus: $(BOBJS)
 	@if [ -f "$(NAME)" ]; then \
 		if ar t "$(NAME)" | grep -qE 'bonus' \
 		&& ! (find $(BOBJS) -newer "$(NAME)" -print -quit | grep -q .); then \
-			echo "make: Nothing to be done for '$@'."; \
+			echo "make: Nothing to be done for 'bonus'."; \
 		else \
 			echo $(AR) $(NAME) $(BOBJS); \
 			$(AR) $(NAME) $(BOBJS); \
