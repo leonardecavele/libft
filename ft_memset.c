@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 14:00:09 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/11/04 13:07:44 by ldecavel         ###   ########lyon.fr   */
+/*   Updated: 2025/11/07 12:55:22 by ldecavel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	while (n--)
-		((t_u8p)s)[n] = (t_u8)c;
+		((uint8_t *)s)[n] = (uint8_t)c;
 	return (s);
 }

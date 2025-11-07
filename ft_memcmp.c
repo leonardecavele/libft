@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 10:24:11 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/11/04 14:17:50 by ldecavel         ###   ########lyon.fr   */
+/*   Updated: 2025/11/07 12:55:22 by ldecavel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	if (!n)
 		return (0);
-	while (i + 1 < n && ((t_u8p)s1)[i] == ((t_u8p)s2)[i])
+	while (i + 1 < n && ((uint8_t *)s1)[i] == ((uint8_t *)s2)[i])
 		i++;
-	return (((t_u8p)s1)[i] - ((t_u8p)s2)[i]);
+	return (((uint8_t *)s1)[i] - ((uint8_t *)s2)[i]);
 }

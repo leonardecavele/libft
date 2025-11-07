@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 18:16:32 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/11/04 13:42:59 by ldecavel         ###   ########lyon.fr   */
+/*   Updated: 2025/11/07 13:13:39 by ldecavel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if ((t_u8)(*s) == (t_u8)c)
+		if ((uint8_t)(*s) == (uint8_t)c)
 			return ((char *)s);
 		s++;
 	}
-	if (!(t_u8)c)
+	if (!(uint8_t)c)
 		return ((char *)s);
 	return (0);
 }

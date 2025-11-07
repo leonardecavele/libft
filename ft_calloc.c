@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 13:03:53 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/11/07 09:44:38 by ldecavel         ###   ########lyon.fr   */
+/*   Updated: 2025/11/07 12:55:02 by ldecavel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (!ptr)
 		return (NULL);
 	while (len--)
-		((t_u8p)ptr)[len] = 0;
+		((uint8_t *)ptr)[len] = 0;
 	return (ptr);
 }

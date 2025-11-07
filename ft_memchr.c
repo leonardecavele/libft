@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 10:13:29 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/08/28 15:51:23 by ldecavel         ###   ########.fr       */
+/*   Updated: 2025/11/07 12:55:22 by ldecavel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = -1;
 	while (++i < n)
-		if (((t_u8p)s)[i] == (t_u8)c)
-			return (&((t_u8p)s)[i]);
+		if (((uint8_t *)s)[i] == (uint8_t)c)
+			return (&((uint8_t *)s)[i]);
 	return (0);
 }

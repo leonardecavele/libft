@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 11:37:21 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/11/04 15:12:02 by ldecavel         ###   ########lyon.fr   */
+/*   Updated: 2025/11/07 12:51:57 by ldecavel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
-
-typedef unsigned char	*t_u8p;
-typedef unsigned char	t_u8;
+# include <stdint.h>
 
 typedef struct s_list
 {

@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 15:09:31 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/11/04 14:27:15 by ldecavel         ###   ########lyon.fr   */
+/*   Updated: 2025/11/07 12:54:08 by ldecavel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_bzero(void *s, size_t n)
 {
 	while (n--)
-		((t_u8p)s)[n] = 0;
+		((uint8_t *)s)[n] = 0;
 }
