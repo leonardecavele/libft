@@ -62,20 +62,19 @@ OBJS = $(SRCS:%.c=$(BUILD)/%.o)
 DEPS = $(OBJS:.o=.d)
 
 # rules
-all: $(NAME)
+all:
+	@mkdir -p $(BUILD)
 	@$(MAKE) $(NAME) --no-print-directory
 
-bonus: $(BOBJS)
+bonus:
+	@mkdir -p $(BUILD)
 	@$(MAKE) $(NAME) SRCS="$(SRCS) $(BSRCS)" --no-print-directory
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-$(BUILD)/%.o: %.c | $(BUILD)
+$(BUILD)/%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
-
-$(BUILD):
-	@mkdir -p $(BUILD)
 
 clean:
 	rm -rf $(BUILD)
