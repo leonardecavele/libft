@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 11:54:12 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/11/04 14:21:58 by ldecavel         ###   ########lyon.fr   */
+/*   Updated: 2025/11/10 11:44:55 by ldecavel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 int	ft_atoi(const char *nptr)
 {
-	unsigned long	result;
-	size_t			i;
-	char			sign;
+	uint64_t	result;
+	size_t		i;
+	char		sign;
 
 	i = 0;
 	while ((nptr[i] >= '\t' && nptr[i] <= '\r') || nptr[i] == ' ')
@@ -34,7 +34,7 @@ int	ft_atoi(const char *nptr)
 		result += nptr[i++] - '0';
 		if (result >= LONG_MAX && sign > 0)
 			return (-1);
-		else if (result >= (unsigned long)(LONG_MAX) + 1 && sign < 0)
+		else if (result >= (uint64_t)(LONG_MAX) + 1 && sign < 0)
 			return (0);
 	}
 	return (result * sign);

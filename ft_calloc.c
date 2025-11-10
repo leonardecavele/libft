@@ -6,13 +6,12 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 13:03:53 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/11/07 12:55:02 by ldecavel         ###   ########lyon.fr   */
+/*   Updated: 2025/11/10 11:45:18 by ldecavel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdint.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
