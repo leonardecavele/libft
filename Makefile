@@ -1,11 +1,17 @@
+# build
 NAME = libft.a
-BUILD = build
-
 CC = cc
 AR = ar rcs
+BUILD = build
+
+# flags
 CFLAGS = -MMD -MP -Wall -Wextra -Werror -I .
 MAKEFLAGS+= -j $$(nproc)
 
+.PHONY: all bonus clean fclean re
+-include $(DEPS)
+
+# files
 SRCS = \
 	ft_isalpha.c \
 	ft_isdigit.c \
@@ -41,10 +47,6 @@ SRCS = \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c
-
-OBJS = $(SRCS:%.c=$(BUILD)/%.o)
-DEPS = $(OBJS:.o=.d)
-
 BSRCS = \
 	ft_lstadd_back_bonus.c \
 	ft_lstadd_front_bonus.c \
@@ -56,11 +58,10 @@ BSRCS = \
 	ft_lstiter_bonus.c \
 	ft_lstmap_bonus.c
 
-BOBJS = $(BSRCS:%.c=$(BUILD)/%.o)
-BDEPS = $(BOBJS:.o=.d)
+OBJS = $(SRCS:%.c=$(BUILD)/%.o)
+DEPS = $(OBJS:.o=.d)
 
-.PHONY: all bonus clean fclean re
-
+# rules
 all: $(NAME)
 	@$(MAKE) $(NAME) --no-print-directory
 
@@ -84,5 +85,3 @@ fclean: clean
 
 re: fclean
 	@$(MAKE) all --no-print-directory
-
--include $(DEPS) $(BDEPS)
