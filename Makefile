@@ -73,7 +73,7 @@ bonus:
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-$(BUILD)/%.o: %.c
+$(BUILD)/%.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
