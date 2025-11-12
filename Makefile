@@ -8,9 +8,6 @@ BUILD = build
 CFLAGS = -MMD -MP -Wall -Wextra -Werror -I .
 MAKEFLAGS+= -j $$(nproc)
 
-.PHONY: all bonus clean fclean re
--include $(DEPS)
-
 # files
 SRCS =\
 	ft_isalpha.c\
@@ -73,7 +70,7 @@ bonus:
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-$(BUILD)/%.o: %.c libft.h
+$(BUILD)/%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
@@ -84,3 +81,6 @@ fclean: clean
 
 re: fclean
 	@$(MAKE) all --no-print-directory
+
+-include $(DEPS)
+.PHONY: all bonus clean fclean re
