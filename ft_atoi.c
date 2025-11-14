@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 11:54:12 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/11/10 11:44:55 by ldecavel         ###   ########lyon.fr   */
+/*   Updated: 2025/11/14 14:05:09 by ldecavel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_atoi(const char *nptr)
 	if (nptr[i] == '+' || nptr[i] == '-')
 		i++;
 	result = 0;
-	while (nptr[i] >= '0' && nptr[i] <= '9')
+	while (ft_isdigit(nptr[i]))
 	{
 		result *= 10;
 		result += nptr[i++] - '0';

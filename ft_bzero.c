@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 15:09:31 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/11/07 12:54:08 by ldecavel         ###   ########lyon.fr   */
+/*   Updated: 2025/11/14 14:05:30 by ldecavel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	while (n--)
-		((uint8_t *)s)[n] = 0;
+	ft_memset(s, 0, n);
 }

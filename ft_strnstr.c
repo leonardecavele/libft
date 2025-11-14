@@ -6,7 +6,7 @@
 /*   By: ldecavel <ldecavel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 11:21:54 by ldecavel          #+#    #+#             */
-/*   Updated: 2025/11/12 17:39:17 by ldecavel         ###   ########lyon.fr   */
+/*   Updated: 2025/11/14 14:12:01 by ldecavel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return ((char *)haystack);
 	if (!len)
 		return (NULL);
-	needle_len = -1;
-	while (needle[++needle_len])
-		;
+	needle_len = ft_strlen(needle);
 	i = -1;
 	while (haystack[++i] && i + needle_len <= len)
 		if (ft_strncmp(haystack + i, needle, needle_len) == 0)
